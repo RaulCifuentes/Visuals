@@ -1,0 +1,35 @@
+{
+    "app": {
+        "name": "MetricVisuals"
+    },
+    "worldmap" : {
+        "name": "Worldmap",
+        "title": "World",
+        "subtitle": "Pick a country"
+    },
+    "basket" : {
+        "name": "Basket",
+        "title": "Basket Distribution",
+        "subtitle": "Basket Distribution",
+        "valueAxis.label": "Percentage"
+    },
+    "divisions": {
+        "food": "Alimentos Y Bebidas No Alcoholicas",
+        "alcohol": "Bebidas Alcoholicas Y Tabaco",
+        "clothing": "Vestuario Y Calzado",
+        "real estate": "Vivienda Y Servicios Básicos",
+        "housing": "Equipamiento Y Mantención Del Hogar",
+        "health": "Salud",
+        "transport": "Transporte",
+        "communication": "Comunicaciones",
+        "leisure": "Recreación Y Cultura",
+        "education": "Educación",
+        "tourism": "Restaurantes Y Hoteles",
+        "goods": "Bienes Y Servicios Diversos"
+    },
+    "countries":
+    {
+        "peru": "Peruvian land",
+        "chile": "Chilean land"
+    }
+}

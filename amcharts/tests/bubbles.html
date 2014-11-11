@@ -1,0 +1,109 @@
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+
+    <!--&lt;!&ndash; Bootstrap Core CSS &ndash;&gt;-->
+    <!--<link href="css/vendor/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">-->
+
+    <!--&lt;!&ndash;my styles&ndash;&gt;-->
+    <!--&lt;!&ndash;<link rel="stylesheet" href="css/bubbles.css"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;libraries&ndash;&gt;-->
+    <!--<script type="text/javascript" src="js/vendor/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/vendor/d3/d3.js"></script>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<div class="row">-->
+    <!--&lt;!&ndash; /.col-lg-12 &ndash;&gt;-->
+    <!--<div class="col-md-12 col-lg-12">-->
+        <!--<div id="bubbles-map-panel" class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--&lt;!&ndash;World Map&ndash;&gt;-->
+                <!--Distribuciones Canasta Consolidada-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+            <!--<div id="bubbles-map-container" class="panel-body">-->
+                <!--<div id="bubbles-map-container-left"></div>-->
+                <!--<div id="bubbles-map-container-center">-->
+                    <!--<div id="bubbles-div">-->
+                        <!--<div id="view-selection" class="btn-group">-->
+                            <!--<a href="#" id="all" class="btn btn-md btn-default active" role="button">Canasta Consolidada</a>-->
+                            <!--<a href="#" id="year" class="btn btn-md btn-default" role="button">Canasta por año</a>-->
+                        <!--</div>-->
+                        <!--<div id="vis-show"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="bubbles-map-container-right"></div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /.panel &ndash;&gt;-->
+    <!--</div>-->
+
+<!--</div>-->
+
+<!--</body>-->
+
+<!--&lt;!&ndash;<div id="container" class="container">&ndash;&gt;-->
+  <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;<div id="main" role="main">&ndash;&gt;-->
+       <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div> &lt;!&ndash;! end of #container &ndash;&gt;&ndash;&gt;-->
+
+
+<!--<script type="text/javascript" src="js/visualsModule.js"></script>-->
+<!--<script type="text/javascript" src="js/visualsModule.bubblesChart.tooltip.js"></script>-->
+<!--<script type="text/javascript" src="js/visualsModule.bubblesChart.js"></script>-->
+
+<!--<script type="text/javascript">-->
+
+    <!--$(function() {-->
+
+        <!--var setupData = function () {-->
+            <!--var yearsToInclude = [2013, 2014];-->
+            <!--visualsModule.data.loadDataBubblesChart(confiMap.ineFile, yearsToInclude, visualsModule.bubblesChart.init)-->
+
+
+            <!--var myParser = d3.dsv(';', 'text/plain');-->
+            <!--myParser("data/ine-cpi-producto-2013.csv", function(firstDataAsArray) {-->
+                <!--firstDataAsArray.forEach(function (d) {-->
+                    <!--d.year = 2013;-->
+                <!--});-->
+                <!--myParser("data/ine-cpi-producto-2014.csv", function (secondDataAsArray) {-->
+                    <!--secondDataAsArray.forEach(function (d) {-->
+                        <!--d.year = 2014;-->
+                    <!--});-->
+                    <!--concatArray = firstDataAsArray.concat(secondDataAsArray);-->
+                <!--});-->
+            <!--});-->
+
+        <!--}-->
+
+        <!--var setupButtons = function () {-->
+            <!--$('#view-selection a').click(function() {-->
+                <!--var view_type = $(this).attr('id');-->
+                <!--$('#view_selection a').removeClass('active');-->
+                <!--$(this).toggleClass('active');-->
+                <!--bubblesChart.toggle_view(view_type);-->
+                <!--return false;-->
+            <!--});-->
+        <!--}-->
+
+        <!--var setupChart  = function (dataset) {-->
+            <!--bubblesChart.init(dataset);-->
+            <!--bubblesChart.toggle_view('all');-->
+        <!--}-->
+
+        <!--var data = setupData(callbak);-->
+        <!--setupChart(data);-->
+        <!--setupButtons();-->
+
+    <!--});-->
+
+
+<!--</script>-->
+
+<!--</html>-->

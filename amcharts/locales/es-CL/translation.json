@@ -1,0 +1,36 @@
+{
+    "app": {
+        "name": "MetricVisuals"
+    },
+    "worldmap": {
+        "name": "Mapa Mundo",
+        "title": "Mundo",
+        "subtitle": "Elige un país"
+    },
+    "basket": {
+        "name": "Canasta",
+        "title": "Distribución de la canasta",
+        "subtitle": "Canasta subtítulo",
+        "valueAxis.label": "Porcentaje"
+    },
+    "divisions": {
+        "food": "Alimentos Y Bebidas No Alcoholicas",
+        "alcohol": "Bebidas Alcoholicas Y Tabaco",
+        "clothing": "Vestuario Y Calzado",
+        "real estate": "Vivienda Y Servicios Básicos",
+        "housing": "Equipamiento Y Mantención Del Hogar",
+        "health": "Salud",
+        "transport": "Transporte",
+        "communication": "Comunicaciones",
+        "leisure": "Recreación Y Cultura",
+        "education": "Educación",
+        "tourism": "Restaurantes Y Hoteles",
+        "goods": "Bienes Y Servicios Diversos"
+    },
+    "countries":
+    {
+        "peru": "Perúuuu",
+        "chile": "Chi Chi Chi Le Le Le "
+    }
+}
+

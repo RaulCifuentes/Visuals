@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--libraries styles -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+
+    <!--my styles-->
+    <link type="text/css" rel="stylesheet" href="css/rickshaw/rickshaw.css">
+    <link rel="stylesheet" href="css/visuals.css"/>
+
+    <!--<link rel="stylesheet" href="js/vendor/stock/bubbles.css"/>-->
+
+    <!--libraries-->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+
+    <!--&lt;!&ndash;amstock&ndash;&gt;-->
+    <script src="js/vendor/stock/amcharts.js" type="text/javascript"></script>
+    <script src="js/vendor/stock/serial.js" type="text/javascript"></script>
+    <script src="js/vendor/stock/amstock.js" type="text/javascript"></script>
+
+    <!--<!--amcharts-->
+    <script src="js/vendor/amcharts/amcharts.js" type="text/javascript"></script>
+
+    <!-- ammaps-->
+    <script src="js/vendor/ammap/ammap_amcharts_extension.js" type="text/javascript"></script>
+    <script src="js/vendor/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+
+
+    <!--d3-->
+    <script src="js/vendor/d3/d3.v3.js"></script>
+
+    <!--rickshaw-->
+    <script src="js/vendor/rickshaw/rickshaw.js"></script>
+
+</head>
+<body>
+<div class="row">
+    <!-- /.col-lg-12 -->
+    <div class="col-md-12 col-lg-12">
+        <div id="world-map-panel" class="panel panel-default">
+            <div class="panel-heading">
+                <!--World Map-->
+                Datos para Colombia, Chile, Peru
+            </div>
+            <!-- /.panel-heading -->
+            <div id="world-map-container" class="panel-body">
+                <div id="world-map-container-left"></div>
+                <div id="world-map-container-center">
+                    <div id="map-div"></div>
+                </div>
+                <div id="world-map-container-right"></div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <div id="lines-chart-panel" class="panel panel-default">
+            <div class="panel-heading">
+                <!--lines Map-->
+                Indice de Precios (MesXX - Pais XX) Base 100
+            </div>
+            <!-- /.panel-heading -->
+            <div id="lines-chart-container" class="panel-body">
+                <div id="lines-chart-container-left"></div>
+                <div id="lines-chart-container-center">
+                    <div id="lines-div"></div>
+                </div>
+                <div id="lines-chart-container-right"></div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div id="stacked-chart-panel" class="panel panel-default">
+            <div class="panel-heading">
+                Distribución Canasta
+            </div>
+            <!-- /.panel-heading -->
+            <div id="stacked-chart-container" class="panel-body">
+                <div id="stacked-chart-container-left"></div>
+                <div id="stacked-chart-container-center">
+                    <div id="stacked-div"></div>
+                </div>
+                <div id="stacked-chart-container-right"></div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div id="multi-chart-panel" class="panel panel-default">
+            <div class="panel-heading">
+                Multiple Variable
+            </div>
+            <!-- /.panel-heading -->
+            <div id="multi-chart-container" class="panel-body">
+                <div id="multi-chart-container-left"></div>
+                <div id="multi-chart-container-center" class="column">
+                    <div id="multi-div"></div>
+                    <div id="multi-slider"></div>
+                </div>
+                <div id="multi-chart-container-right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div id="bubbles-chart-panel" class="panel panel-default">
+            <div class="panel-heading">
+                Otra Distribución Canasta
+            </div>
+            <!-- /.panel-heading -->
+            <div id="bubbles-chart-container" class="panel-body">
+                <div id="bubbles-chart-container-left"></div>
+                <div id="bubbles-chart-container-center">
+                    <div id="bubbles-div"></div>
+                </div>
+                <div id="bubbles-chart-container-right"></div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+</div>
+
+
+</body>
+<!--my javascript-->
+<script src="js/visualsModule.js"></script>
+<script src="js/visualsModule.utils.js"></script>
+<script src="js/visualsModule.data.js"></script>
+<script src="js/visualsModule.linesChart.js"></script>
+<script src="js/visualsModule.stackedChart.js"></script>
+<script src="js/visualsModule.multiChart.js"></script>
+<script src="js/visualsModule.worldMap.js"></script>
+<script>
+    $(function () {
+
+        var configMap = {
+            ipcByYear: 'data/lines/ipc-multi-country-by-year.json',
+            basketCompositionByYear: 'data/stacked/country-division-by-year.json',
+            multiIndexesByDate: 'data/multi/multi-indexes-by-date.json'
+        }
+
+
+        var _initLines = function () {
+            visualsModule.data.loadDataLinesChart(configMap.ipcByYear, visualsModule.linesChart.init);
+        };
+
+        var _initStacked = function () {
+            visualsModule.data.loadDataStackChart(configMap.basketCompositionByYear, visualsModule.stackedChart.init);
+        };
+
+        var _initMulti = function () {
+            visualsModule.data.loadDataMultiChart(configMap.multiIndexesByDate, visualsModule.multiChart.init);
+        };
+
+        var initAll = function () {
+            visualsModule.init();
+            _initLines();
+            _initStacked();
+            _initMulti();
+            visualsModule.worldMap.init();
+//            visualsModule.hideCharts();
+        };
+
+        initAll();
+
+    });
+
+    // ******  ANOTHER APPROACH TO WAIT TIL THE DATA (JSON) FILES HAS BEEN LOADED
+    //        var initCallbackHellStrategy = function () {
+    //            visualsModule.data.loadDataLinesChart(configMap.ipcByYear,
+    //
+    //                    visualsModule.data.loadDataStackChart(configMap.basketCompositionByYear,
+    //
+    //                            visualsModule.data.loadDataStockChart(configMap.indexesPricesByDay, startChartingAllTogether)));
+    //
+    //        };
+    //
+    //        var startChartingAllTogether = function () {
+    //            visualsModule.init();
+    //            visualsModule.linesChart.init();
+    //            visualsModule.multiChart.init();
+    //            visualsModule.stackedChart.init();
+    //            visualsModule.worldMap.init();
+    //            visualsModule.hideCharts();
+    //        };
+    //
+    //        trigger callback hell
+    //        initCallbackHellStrategy();
+    // ******
+
+</script>
+
+
+</html>

@@ -1,0 +1,98 @@
+#world-map-container-left {
+    float: left;
+    width: 5%;
+}
+
+#world-map-container-center {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#world-map-container-right {
+    float: right;
+    width: 5%;
+}
+
+#map-div {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#lines-chart-container-left {
+    float: left;
+    width: 5%;
+}
+
+#lines-chart-container-center {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#lines-chart-container-right {
+    float: right;
+    width: 5%;
+}
+
+#lines-div {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#stacked-chart-container-left {
+    float: left;
+    width: 5%;
+}
+
+#stacked-chart-container-center {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#stacked-chart-container-right {
+    float: right;
+    width: 5%;
+}
+
+#stacked-div {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#multi-chart-container-left {
+    float: left;
+    width: 5%;
+}
+
+#multi-chart-container-center {
+    margin: 0 auto;
+    width: 90%;
+    align-content: center;
+}
+
+#multi-chart-container-right {
+    float: right;
+    width: 5%;
+}
+
+#multi-div {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto 10px auto;
+}
+
+#multi-slider {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+.column {
+    display: inline-block
+}
+

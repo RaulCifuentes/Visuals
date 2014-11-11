@@ -1,0 +1,73 @@
+div, span, p, td {
+    font-family: Arial, sans-serif;
+}
+
+/*.column {*/
+    /*display: inline-block*/
+/*}*/
+
+#multi-legend {
+    background: white
+}
+
+#multi-legend .line {
+    color: #333
+}
+
+/*#multi-div {*/
+    /*display: inline-block;*/
+/*}*/
+
+/*#multi-legend {*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*left: 8px;*/
+/*}*/
+
+#multi-legend_container {
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+    width: 0;
+}
+
+#multi-chart_container {
+    float: left;
+    position: relative;
+}
+
+.tets{
+
+    color: rgba();
+    /*color: rgba(#FF6600,.7);*/
+    /*color: rgba(#FCD202,.7);*/
+    /*color: rgba(#B0DE09,.7);*/
+    /*color: rgba(#0D8ECF,.7);*/
+    /*color: rgba(#2A0CD0,.7);*/
+    /*color: rgba(#CD0D74,.7);*/
+    /*color: rgba(#CC0000,.7);*/
+    /*color: rgba(#00CC00,.7);*/
+    /*color: rgba(#0000CC,.7);*/
+    /*color: rgba(#DDDDDD,.7);*/
+    /*color: rgba(#999999,.7);*/
+    /*color: rgba(#333333,.7);*/
+    /*color: rgba(#990000,.7);*/
+}
+
+.color {
+
+    background-color: #FF6600;
+
+    color: #FF6600;
+    color: #FCD202;
+    color: #B0FEAA;
+    color: #0D8ECF;
+    color: #CD0D74;
+    color: #CC0000;
+    color: #00CC00;
+    color: #DDDDDD;
+    color: #999999;
+    color: #333333;
+    color: #990000;
+
+}

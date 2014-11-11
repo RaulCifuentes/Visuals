@@ -1,0 +1,65 @@
+#world-map-container-left {
+    float: left;
+    width: 20%;
+}
+
+#world-map-container-center {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#world-map-container-right {
+    float: right;
+    width: 20%;
+}
+
+#map-div {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#stacked-chart-container-left {
+    float: left;
+    width: 20%;
+}
+
+#stacked-chart-container-center {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#stacked-chart-container-right {
+    float: right;
+    width: 20%;
+}
+
+#stacked-div {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#stock-chart-container-left {
+    float: left;
+    width: 20%;
+}
+
+#stock-chart-container-center {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#stock-chart-container-right {
+    float: right;
+    width: 20%;
+}
+
+#stock-div {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    align-content: center;
+}
